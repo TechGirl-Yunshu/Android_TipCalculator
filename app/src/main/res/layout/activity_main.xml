@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2723CEB4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewSeekbarID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/percentageSeekBarID"
+        app:layout_constraintTop_toTopOf="@+id/percentageSeekBarID" />
+
+    <TextView
+        android:id="@+id/resultID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#168A72"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButtonID"
+        app:layout_constraintVertical_bias="0.424" />
+
+    <SeekBar
+        android:id="@+id/percentageSeekBarID"
+        android:layout_width="250dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="12dp"
+        android:max="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/billAmountID"
+        android:layout_width="283dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="216dp"
+        android:ems="10"
+        android:hint="@string/enter_bill"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/tip_percentage"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billAmountID" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="99dp"
+        android:layout_height="116dp"
+        android:background="#D6F7F1"
+        app:layout_constraintBottom_toTopOf="@+id/billAmountID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73"
+        app:srcCompat="@drawable/unnamed" />
+
+    <Button
+        android:id="@+id/calculateButtonID"
+        android:layout_width="207dp"
+        android:layout_height="71dp"
+        android:text="@string/calculate_text"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#1CD5B8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/percentageSeekBarID"
+        app:layout_constraintVertical_bias="0.16" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
